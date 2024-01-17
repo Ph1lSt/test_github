@@ -5,6 +5,8 @@ public class Rectangle extends Shapes{
 	Coordinate coordinate1;
 	Coordinate coordinate2;
 	
+	double circumference;
+	
 	public Rectangle(Coordinate coordinate1, Coordinate coordinate2) {
 		super();
 		this.coordinate1 = coordinate1;
@@ -13,8 +15,10 @@ public class Rectangle extends Shapes{
 
 	@Override
 	public double calculateCircumference() {
-		// TODO Auto-generated method stub
-		return 0;
+		double x = this.coordinate1.getX() - this.coordinate2.getX();
+		double y = this.coordinate1.getY() - this.coordinate2.getX();
+		circumference = x *y;
+		return circumference;
 	}
 
 	@Override
