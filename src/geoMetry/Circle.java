@@ -35,13 +35,11 @@ public class Circle {
 		this.radiusPoint = radiusPoint;
 	}
 
+	
+	public double calculateRadius(Coordinate middle, Coordinate radiusPoint) {
+        double radius = Math.sqrt(Math.pow(radiusPoint.getX() - middle.getX(), 2) +
+					Math.pow(radiusPoint.getY() - middle.getY(), 2));
 
-
-	public double calculateRadius(Coordinate radiusPoint, Coordinate middle) {
-		double radius = radiusPoint.getX() - middle.getX();
-		if(radius < 0) {
-			radius = radius *(-1);
-		}
-		return radius;
-	}
+        return radius;
+    }
 }
