@@ -11,6 +11,9 @@ public class Rectangle extends Shapes{
         this.point2 = point2;
     }
 
+    /*
+     * Calculates the circumference of the Rectangle
+     */
 	@Override
 	public double calculateCircumference() {
 		double length = Math.abs(point2.getX() - point1.getX());
@@ -19,6 +22,9 @@ public class Rectangle extends Shapes{
 		return circumference;
 	}
 
+	/*
+	 * Calculates the area of a rectangle
+	 */
 	@Override
 	public double calculateArea() {
 		double length = Math.abs(point2.getX() - point1.getX());
