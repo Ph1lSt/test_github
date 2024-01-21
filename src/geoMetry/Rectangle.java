@@ -1,39 +1,31 @@
 package geoMetry;
 
 public class Rectangle extends Shapes{
+	
+    Coordinate point1;
+    Coordinate point2;
+ 
 
-	Coordinate coordinate1;
-	Coordinate coordinate2;
-	
-	double x = this.coordinate1.getX() - this.coordinate2.getX();
-	double y = this.coordinate1.getY() - this.coordinate2.getX();
-	
-	double circumference;
-	double area;
-	
-	public Rectangle(Coordinate coordinate1, Coordinate coordinate2) {
-		super();
-		this.coordinate1 = coordinate1;
-		this.coordinate2 = coordinate2;
-	}
-	/**
-	 * calculates the circumference of the rectangle
-	 */
+    public Rectangle(Coordinate point1, Coordinate point2) {
+        this.point1 = point1;
+        this.point2 = point2;
+    }
+
 	@Override
 	public double calculateCircumference() {
-		circumference = 2*x + 2*y;
+		double length = Math.abs(point2.getX() - point1.getX());
+		double width = Math.abs(point2.getY() - point1.getY());
+		double circumference = 2 *length + 2*width;
 		return circumference;
 	}
 
-	/**
-	 * calculates the area of the rectangle
-	 */
 	@Override
 	public double calculateArea() {
-		area = x *y;
+		double length = Math.abs(point2.getX() - point1.getX());
+		double width = Math.abs(point2.getY() - point1.getY());
+		double area = length *width;
 		return area;
 	}
-	
-	
 
+	
 }
