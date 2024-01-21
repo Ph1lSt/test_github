@@ -9,6 +9,9 @@ public class Test {
 		
 		double radius = c.calculateRadius(middle, radiusPoint);
         System.out.println("Der Radius des Kreises beträgt: " + radius);
+        
+        System.out.println("Die Fläche des Kreises beträgt: " + c.calculateArea());
+        System.out.println("Der Umfang des Kreises beträgt: " + c.calculateCircumference());
 	}
 
 }

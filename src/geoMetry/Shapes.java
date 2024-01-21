@@ -6,7 +6,6 @@ public abstract class Shapes {
 	private ArrayList<Coordinate> coordinates;
 	double circumference;
 	double area;
-	int coordinateAmount = coordinates.size();
 	
 	public abstract double calculateCircumference();
 	public abstract double calculateArea();
@@ -28,12 +27,6 @@ public abstract class Shapes {
 	}
 	public void setArea(double area) {
 		this.area = area;
-	}
-	public int getCoordinateAmount() {
-		return coordinateAmount;
-	}
-	public void setCoordinateAmount(int coordinateAmount) {
-		this.coordinateAmount = coordinateAmount;
 	}
 	
 	
