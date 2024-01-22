@@ -6,7 +6,14 @@ public abstract class Shapes {
 	private ArrayList<Shapes> shapes;
 	double circumference;
 	double area;
-	double addedArea;
+	String shapeName;
+	
+	public String getShapeName() {
+		return shapeName;
+	}
+	public void setShapeName(String shapeName) {
+		this.shapeName = shapeName;
+	}
 	
 	public abstract double calculateCircumference();
 	public abstract double calculateArea();
