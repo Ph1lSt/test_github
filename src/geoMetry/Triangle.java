@@ -23,7 +23,8 @@ public class Triangle extends Shapes {
      * Calculates the individual lengths
      */
 	public double calculateSide(Coordinate point1, Coordinate point2) {
-        return Math.sqrt(Math.pow(point2.getX() - point1.getX(), 2) + Math.pow(point2.getY() - point1.getY(), 2));
+        return Math.sqrt(Math.pow(point2.getX() - point1.getX(), 2) + 
+        		Math.pow(point2.getY() - point1.getY(), 2));
     }
 
 	/*
@@ -44,7 +45,7 @@ public class Triangle extends Shapes {
 	@Override
 	public double calculateArea() {
 		double s = calculateCircumference() / 2;
-        double flaeche = Math.sqrt(s * (s - sideLengths[0]) * (s - sideLengths[1]) * (s - sideLengths[2]));
-        return flaeche;
+        double area = Math.sqrt(s * (s -sideLengths[0]) *(s -sideLengths[1]) * (s -sideLengths[2]));
+        return area;
 		}
 }
