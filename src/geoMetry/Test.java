@@ -31,11 +31,11 @@ public class Test {
         //Triangle test
         System.out.println("-----Triangle testrun-----");
         Triangle t = new Triangle(c1, c2, c3);
-        System.out.println(t.calculateArea());
-        System.out.println(t.calculateCircumference());
-        System.out.println(t.calculateSide(0));
-        System.out.println(t.calculateSide(1));
-        System.out.println(t.calculateSide(2));
+        System.out.println("Die Fläche des Dreiecks beträgt: " + t.calculateArea());
+        System.out.println("Der Umfang des Dreiecks beträgt: " + t.calculateCircumference());
+        System.out.println("Strecke a, b: " + t.calculateSide(c1, c2));
+        System.out.println("Strecke b, c: " + t.calculateSide(c2, c3));
+        System.out.println("Strecke c, a: " + t.calculateSide(c3, c1));
         
 	}
 
