@@ -11,6 +11,7 @@ public class Circle extends Shapes{
 		this.middle = middle;
 		this.radiusPoint = radiusPoint;
 	}
+	
 
 	public Coordinate getMiddle() {
 		return middle;
@@ -58,12 +59,14 @@ public class Circle extends Shapes{
 	}
 
 
+	/*
+	 * Calculates the area of the circle
+	 */
 	@Override
 	public double calculateArea() {
 		radius = this.calculateRadius(this.getMiddle(), this.getRadiusPoint());
 		double area = Math.pow(radius, 2) *Math.PI;
 		return area;
 	}
-	
 	
 }

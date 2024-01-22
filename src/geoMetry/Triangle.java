@@ -17,6 +17,7 @@ public class Triangle extends Shapes {
             calculateSide(point3, point1)
         };
     }
+    
 	
     /*
      * Calculates the individual lengths
