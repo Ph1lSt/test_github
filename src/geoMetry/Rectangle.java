@@ -10,9 +10,11 @@ public class Rectangle extends Shapes{
     	super();
         this.point1 = point1;
         this.point2 = point2;
+        this.shapeName = "Rechteck";
     }
+    
 
-    /*
+	/*
      * Calculates the circumference of the Rectangle
      */
 	@Override
