@@ -4,9 +4,9 @@ import java.util.ArrayList;
 public abstract class Shapes {
 	
 	private ArrayList<Shapes> shapes;
-	double circumference;
-	double area;
-	String shapeName;
+	private double circumference;
+	private double area;
+	public String shapeName;
 	
 	public String getShapeName() {
 		return shapeName;
