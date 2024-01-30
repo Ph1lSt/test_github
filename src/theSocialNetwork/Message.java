@@ -3,21 +3,21 @@ package theSocialNetwork;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
-public class Post {
+public class Message {
 
 	private String autor;
 	private String text;
 	private LocalDate timestamp;
 	private int likes;
-	private ArrayList<String> comments;
+	private ArrayList<Comment> comments;
 	
-	public Post(String autor, String text, LocalDate timestamp, int likes, ArrayList<String> comments) {
+	public Message(String autor, String text, LocalDate timestamp, int likes, ArrayList<String> comments) {
 		super();
 		this.autor = autor;
 		this.text = text;
 		this.timestamp = timestamp;
 		this.likes = likes;
-		this.comments = new ArrayList<String>();
+		this.comments = new ArrayList<Comment>();
 	}
 
 	public String getAutor() {
@@ -52,11 +52,11 @@ public class Post {
 		this.likes = likes;
 	}
 
-	public ArrayList<String> getComments() {
+	public ArrayList<Comment> getComments() {
 		return comments;
 	}
 
-	public void setComments(ArrayList<String> comments) {
+	public void setComments(ArrayList<Comment> comments) {
 		this.comments = comments;
 	}
 	
