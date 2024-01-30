@@ -9,12 +9,13 @@ public class Post {
 	private User author;
 	private ArrayList<Comment> comments;
 	private LocalDate timestamp;
+	private ArrayList<Post> posts;
 	
 	public Post(int likes, User author, ArrayList<Comment> comments, LocalDate timestamp) {
 		super();
 		this.likes = likes;
 		this.author = author;
-		this.comments = comments;
+		this.comments = new ArrayList<Comment>();
 		this.timestamp = timestamp;
 	}
 
@@ -49,6 +50,5 @@ public class Post {
 	public void setTimestamp(LocalDate timestamp) {
 		this.timestamp = timestamp;
 	}
-	
 	
 }
