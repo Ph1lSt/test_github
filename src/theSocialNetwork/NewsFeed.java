@@ -19,11 +19,25 @@ public class NewsFeed {
 		this.posts = posts;
 	}
 	
-	public void addPosts(Post p) {
+	/**
+	 * lets you add posts
+	 * @param p
+	 */
+	public void addPost(Post p) {
 		posts.add(p);
 	}
 
+	/**
+	 * lets you remove posts
+	 * @param p
+	 */
+	public void deletePost(Post p) {
+		posts.remove(p);
+	}
 
+	/**
+	 * Prints out the news feed
+	 */
 	public void printNewsFeed() {
 		for(Post p : posts) {
 			if (p instanceof Message) {
