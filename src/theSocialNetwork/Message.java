@@ -3,8 +3,6 @@ package theSocialNetwork;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
-import geoMetry.Shapes;
-
 public class Message extends Post{
 
 	private String text;
@@ -44,6 +42,5 @@ public class Message extends Post{
 					" | ❤️" + likes;
 		}
 		return tmp;
-
 	}
 }

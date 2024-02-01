@@ -9,7 +9,6 @@ public class Post {
 	private User author;
 	private ArrayList<Comment> comments;
 	private LocalDate timestamp;
-	private ArrayList<Post> posts;
 	
 	public Post(int likes, User author, ArrayList<Comment> comments, LocalDate timestamp) {
 		super();
@@ -50,5 +49,18 @@ public class Post {
 	public void setTimestamp(LocalDate timestamp) {
 		this.timestamp = timestamp;
 	}
+
+	@Override
+	public String toString() {
+		String tmp = "All comments: ";
+		for(Comment c : comments) {
+			User author = c.getAuthor();
+			String text = c.getText();
+			tmp += tmp + "\n\tVerfasst von: " + author +
+					"\n\t" + text;
+		}
+		return tmp;
+	}
+	
 	
 }
