@@ -31,7 +31,7 @@ public class Photo extends Post{
 	}
 	
 	public String toString() {
-		String tmp = "Alle Nachrichten: ";
+		String tmp = "Photo(s): ";
 		for(Photo p : photos) {
 			User author = p.getAuthor();
 			String headline = p.getHeadline();

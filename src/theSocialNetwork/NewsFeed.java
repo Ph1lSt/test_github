@@ -44,13 +44,14 @@ public class NewsFeed {
 	 */
 	public void printNewsFeed() {
 		for(Post p : posts) {
-			if (p instanceof Message) {
-                p.toString();
-            } else if (p instanceof Photo) {
-                p.toString();
-            } else {
-                System.err.println("Unbekannter Post-Typ.");
-            }
+			System.out.println(p.toString());
+//			if (p instanceof Message) {
+//                p.toString();
+//            } else if (p instanceof Photo) {
+//                p.toString();
+//            } else {
+//                System.err.println("Unbekannter Post-Typ.");
+//            }
 		}
 	}
 	

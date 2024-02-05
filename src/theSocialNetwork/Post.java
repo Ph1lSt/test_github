@@ -11,7 +11,7 @@ public class Post {
 	private LocalDate timestamp;
 	
 	public Post() {
-		
+		this.timestamp = LocalDate.now();
 	}
 	
 	public Post(int likes, User author, ArrayList<Comment> comments, LocalDate timestamp) {
@@ -19,7 +19,7 @@ public class Post {
 		this.likes = likes;
 		this.author = author;
 		this.comments = new ArrayList<Comment>();
-		this.timestamp = timestamp;
+		this.timestamp = LocalDate.now();
 	}
 
 	public int getLikes() {
@@ -60,7 +60,7 @@ public class Post {
 		for(Comment c : comments) {
 			User author = c.getAuthor();
 			String text = c.getText();
-			tmp += tmp + "\n\tVerfasst von: " + author +
+			tmp += tmp + "\n\tVerfasst von: " + author.toString() +
 					"\n\t" + text;
 		}
 		return tmp;
