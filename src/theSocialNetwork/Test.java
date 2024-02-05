@@ -13,5 +13,7 @@ public class Test {
 		n.addPost(m);
 		n.addPost(m2);
 		n.printNewsFeed();
+		n.deletePost(m2);
+		n.printNewsFeed();
 	}
 }
