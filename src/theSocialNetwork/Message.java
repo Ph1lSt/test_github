@@ -7,10 +7,15 @@ public class Message extends Post{
 
 	private String text;
 	private ArrayList<Message> messages;
+	
+	public Message(User author, String text) {
+		super();
+		this.text = text;
+	}
 
 	public Message(int likes, User author, ArrayList<Comment> comments, LocalDate timestamp) {
 		super(likes, author, comments, timestamp);
-
+		// TODO Auto-generated constructor stub
 	}
 
 	public String getText() {

@@ -10,6 +10,10 @@ public class Post {
 	private ArrayList<Comment> comments;
 	private LocalDate timestamp;
 	
+	public Post() {
+		
+	}
+	
 	public Post(int likes, User author, ArrayList<Comment> comments, LocalDate timestamp) {
 		super();
 		this.likes = likes;
