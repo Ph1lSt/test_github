@@ -5,6 +5,11 @@ import java.time.LocalDate;
 public class Test {
 
 	public static void main(String[] args) {
-		Message m = new Message(1, "Tom", LocalDate.of(2024, 2, 1));
+		NewsFeed n = new NewsFeed();
+		User u = new User("Tom");
+		Message m = new Message(u, "Hello");
+		
+		n.addPost(m);
+		n.printNewsFeed();
 	}
 }

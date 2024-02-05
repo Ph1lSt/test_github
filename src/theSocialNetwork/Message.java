@@ -10,6 +10,7 @@ public class Message extends Post{
 	
 	public Message(User author, String text) {
 		super();
+		this.messages = new ArrayList<Message>();
 		this.text = text;
 	}
 

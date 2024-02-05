@@ -5,6 +5,10 @@ import java.util.ArrayList;
 public class NewsFeed {
 
 	private ArrayList<Post> posts;
+	
+	public NewsFeed() {
+		this.posts = new ArrayList<Post>();
+	}
 
 	public NewsFeed(ArrayList<Post> posts) {
 		super();
