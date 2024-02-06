@@ -9,6 +9,13 @@ public class Photo extends Post{
 	private String headline;
 	private ArrayList<Photo> photos;
 	
+	public Photo(User author, String headline, String pictureFileName) {
+		super();
+		this.headline = headline;
+		this.pictureFileName = pictureFileName;
+		this.photos = new ArrayList<Photo>();
+		this.setAuthor(author);
+	}
 	
 	public Photo(int likes, User author, ArrayList<Comment> comments, LocalDate timestamp) {
 		super(likes, author, comments, timestamp);
@@ -30,6 +37,22 @@ public class Photo extends Post{
 		this.headline = headline;
 	}
 	
+	/**
+	 * lets you add a photo
+	 * @param p
+	 */
+	public void addPhoto(Photo p) {
+		photos.add(p);
+	}
+	
+	/**
+	 * lets you delete a photo
+	 * @param p
+	 */
+	public void deletePhoto(Photo p) {
+		photos.remove(p);
+	}
+	
 	public String toString() {
 		String tmp = "Photo(s): ";
 		for(Photo p : photos) {
@@ -42,7 +65,7 @@ public class Photo extends Post{
 					"\n\t" + headline +
 					"\n\t" + picture +
 					"\n\tDatum: " + timestamp +
-					" | ❤️" + likes;
+					" | ❤️" + likes + "\n\t";
 		}
 		return tmp;
 	}
