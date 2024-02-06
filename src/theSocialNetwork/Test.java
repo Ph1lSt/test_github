@@ -21,5 +21,6 @@ public class Test {
 //		n.deletePost(p);
 //		n.printNewsFeed();
 		n.searchNewsFeed(u2);
+		n.searchMessages(u);
 	}
 }
