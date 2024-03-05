@@ -7,9 +7,9 @@ public class Circle extends Shapes{
 	double radius;
 	
 	public Circle(Coordinate middle, Coordinate radiusPoint) {
+		super();
 		this.middle = middle;
 		this.radiusPoint = radiusPoint;
-		this.shapeName = "Kreis";
 	}
 	
 

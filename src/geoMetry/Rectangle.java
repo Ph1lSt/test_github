@@ -1,25 +1,6 @@
 package geoMetry;
 
 public class Rectangle extends Shapes{
-<<<<<<< HEAD
-
-	public Rectangle(double x, double y) {
-		super(x, y);
-		// TODO Auto-generated constructor stub
-	}
-
-	@Override
-	public double calculateCircumference() {
-		return 0;
-	}
-
-	@Override
-	public double calculateArea() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-=======
 	
     Coordinate point1;
     Coordinate point2;
@@ -29,11 +10,9 @@ public class Rectangle extends Shapes{
     	super();
         this.point1 = point1;
         this.point2 = point2;
-        this.shapeName = "Rechteck";
     }
-    
 
-	/*
+    /*
      * Calculates the circumference of the Rectangle
      */
 	@Override
@@ -56,5 +35,4 @@ public class Rectangle extends Shapes{
 	}
 
 	
->>>>>>> branch 'master' of https://github.com/Ph1lSt/test_github.git
 }

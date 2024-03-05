@@ -16,7 +16,6 @@ public class Triangle extends Shapes {
             calculateSide(point2, point3),
             calculateSide(point3, point1)
         };
-        this.shapeName = "Dreieck";
     }
     
 	
@@ -24,15 +23,8 @@ public class Triangle extends Shapes {
      * Calculates the individual lengths
      */
 	public double calculateSide(Coordinate point1, Coordinate point2) {
-        return Math.sqrt(Math.pow(point2.getX() - point1.getX(), 2) + 
-        		Math.pow(point2.getY() - point1.getY(), 2));
+        return Math.sqrt(Math.pow(point2.getX() - point1.getX(), 2) + Math.pow(point2.getY() - point1.getY(), 2));
     }
-	
-	public void printSides() {
-		for(double d : sideLengths) {
-			System.out.println(d);
-		}
-	}
 
 	/*
 	 * Calculates the circumference of the triangle
@@ -52,7 +44,7 @@ public class Triangle extends Shapes {
 	@Override
 	public double calculateArea() {
 		double s = calculateCircumference() / 2;
-        double area = Math.sqrt(s * (s -sideLengths[0]) *(s -sideLengths[1]) * (s -sideLengths[2]));
-        return area;
+        double flaeche = Math.sqrt(s * (s - sideLengths[0]) * (s - sideLengths[1]) * (s - sideLengths[2]));
+        return flaeche;
 		}
 }
