@@ -1,6 +1,7 @@
 package geoMetry;
 import java.util.ArrayList;
 
+<<<<<<< HEAD
 public abstract class Shapes extends Coordinate {
 	
 	
@@ -12,9 +13,25 @@ public abstract class Shapes extends Coordinate {
 	double circumference;
 	double area;
 	int coordinateAmount = coordinates.size();
+=======
+public abstract class Shapes {
+	
+	private ArrayList<Shapes> shapes;
+	private double circumference;
+	private double area;
+	public String shapeName;
+	
+	public String getShapeName() {
+		return shapeName;
+	}
+	public void setShapeName(String shapeName) {
+		this.shapeName = shapeName;
+	}
+>>>>>>> branch 'master' of https://github.com/Ph1lSt/test_github.git
 	
 	public abstract double calculateCircumference();
 	public abstract double calculateArea();
+<<<<<<< HEAD
 	public ArrayList<Coordinate> getCoordinates() {
 		return coordinates;
 	}
@@ -42,4 +59,25 @@ public abstract class Shapes extends Coordinate {
 	}
 	
 	
+=======
+	
+	public ArrayList<Shapes> getShapes() {
+		return shapes;
+	}
+	public void setShapes(ArrayList<Shapes> shapes) {
+		this.shapes = shapes;
+	}
+	public double getCircumference() {
+		return circumference;
+	}
+	public void setCircumference(double circumference) {
+		this.circumference = circumference;
+	}
+	public double getArea() {
+		return area;
+	}
+	public void setArea(double area) {
+		this.area = area;
+	}
+>>>>>>> branch 'master' of https://github.com/Ph1lSt/test_github.git
 }
