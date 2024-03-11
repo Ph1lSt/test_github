@@ -51,6 +51,7 @@ public class MusicalChair {
 		}else {
 			while(this.names.size() >= 1) {
 				this.rotateAndRemoveLast(distance);
+				System.out.println(this.names);
 			}
 		}
 		
