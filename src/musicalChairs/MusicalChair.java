@@ -1,6 +1,7 @@
 package musicalChairs;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
@@ -34,5 +35,26 @@ public class MusicalChair {
 		}
 		return tmp;
 	}
+	
+	public void rotate(int distance) {
+		Collections.rotate(this.names, distance);
+	}
+	
+	public void rotateAndRemoveLast(int distance) {
+		this.rotate(distance);
+		((LinkedList<String>) this.names).removeLast();
+	}
+	
+	public void play(int distance) {
+		if(this.names.size() <= 0) {
+			System.err.println("Die Liste beinhaltet keine Einträge!");
+		}else {
+			while(this.names.size() >= 1) {
+				this.rotateAndRemoveLast(distance);
+			}
+		}
+		
+	}
+	
 	
 }
