@@ -7,11 +7,12 @@ public class ArrayQueueTest {
 		ArrayQueue queue = new ArrayQueue(10);
 
 		for(int i = 0; i < 10; i++) {
-			queue.enqueue(i);
-			queue.display();
+			ArrayQueue.enqueue(i);
 		}
 		
-		queue.dequeue(1);
+
+		ArrayQueue.display();
+		//queue.dequeue(1);
 		
 	}
 }
