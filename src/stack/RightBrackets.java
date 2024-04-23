@@ -1,31 +1,27 @@
 package stack;
 
-import java.util.Stack;
+import java.util.LinkedList;
 
 public class RightBrackets {
 
 		public static boolean checkBrackets(String input) {
-        Stack<Character> stack = new Stack<>();
-
-        for (int i = 0; i < input.length(); i++) {
-            char currentChar = input.charAt(i);
-            if (currentChar == '(' || currentChar == '[' || currentChar == '{') {
-                stack.push(currentChar);
-            } else if (currentChar == ')' || currentChar == ']' || currentChar == '}') {
-                if (stack.isEmpty()) {
-                    return false; // Es gibt keine offene Klammer für diese schließende Klammer
-                } else {
-                    char top = stack.pop();
-                    if ((currentChar == ')' && top != '(') ||
-                        (currentChar == ']' && top != '[') ||
-                        (currentChar == '}' && top != '{')) {
-                    	System.err.println("Fehlerhafte Klammerung!");
-                        return false; // Die Klammerung stimmt nicht überein
-                    }
-                }
-            }
-        }
-        System.out.println("Korrekte Klammerung!");
-        return stack.isEmpty(); // Der Stack sollte leer sein, wenn die Klammerung korrekt ist
-    }
+        LinkedList<Character> stack = new LinkedList<>();
+        
+        	for(char c : input.toCharArray()) {
+        		if(c == '(' || c == '[' || c == '{') {
+        			stack.push(c);
+        		}else if(c == ')' || c == ']' || c == '}'){
+        			if(stack.isEmpty()) {
+        				return false;
+        			}
+        			char lastOpen = stack.peek();
+        			if((c == ')' && lastOpen != '(') ||
+        					(c == ']' && lastOpen != '[') ||
+        					(c == '}' && lastOpen != '{'))
+        				return false;
+        		}
+        		stack.pop();
+        	}
+            return stack.isEmpty();
+		}
 }
