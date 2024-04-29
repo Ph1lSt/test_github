@@ -16,4 +16,8 @@ public class SumOfTheDigits {
         long longValue = Long.parseLong(value);
         return digitSum(longValue);
     }
+    
+    public static void main(String[] args) {
+		System.out.println(digitSum(12));
+	}
 }
