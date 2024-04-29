@@ -1,4 +1,4 @@
-package password;
+package excursion;
 
 import java.util.LinkedList;
 import java.util.Scanner;
