@@ -1,27 +1,45 @@
 package exceptions;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Scanner;
+import java.util.regex.Pattern;
 
 public class ReadNotes {
+	
+	private static final Pattern noten = Pattern.compile("C,|D,|E,|F,|G,|A,|B,|C|D|E|F|G|A|B|c|d|e|f|g|a|b|c'|d'|e'|f'|g'|a'|b'");
+	
     public static void main(String[] args) {
-        // Passe den Dateipfad entsprechend an
-        String dateipfad = "text.txt";
 
-        try (BufferedReader reader = new BufferedReader(new FileReader(dateipfad))) {
-            String zeile;
-            StringBuilder musiknoten = new StringBuilder();
+        try {
+            File eingabeDatei = new File("MusikEingabe.txt");
+            Scanner scanner = new Scanner(new FileInputStream(eingabeDatei), "UTF-8");
 
-            while ((zeile = reader.readLine()) != null) {
-                // Extrahiere Musiknoten (C, D, E, F, G, A, B, c, d, e, f, g, a, b, c', d', e', f', g', a', b')
-                String noten = zeile.replaceAll("[^CDEFGABcdefgab']", "");
-                musiknoten.append(noten);
-            }
+            File ausgabeDatei = new File("MusikAusgabe.txt");
+            FileWriter fw = new FileWriter(ausgabeDatei);
+            BufferedWriter bw = new BufferedWriter(fw);
 
-            System.out.println("Extrahierte Musiknoten: " + musiknoten.toString());
+            bw.write("M:C");
+            bw.newLine();
+            bw.write("L:1/4");
+            bw.newLine();
+            bw.write("K:C");
+            bw.newLine();
+            while (scanner.hasNextLine()) {
+                String zeile = scanner.nextLine();
+                if(noten.matcher(zeile).matches()) {
+                	bw.write(zeile + " ");
+                }
+           }
+
+            scanner.close();
+            bw.close();
+            fw.close();
         } catch (IOException e) {
-            System.err.println("Fehler beim Lesen der Datei: " + e.getMessage());
+            e.printStackTrace();
         }
     }
 }
